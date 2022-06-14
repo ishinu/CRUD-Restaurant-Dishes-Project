@@ -1,0 +1,52 @@
+body{
+    background:url("signup.png");
+    background-size:cover;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-position:center;
+    }
+    
+    .dishes1{
+        position:absolute;
+        top:45%;
+        left:20%;
+    }
+
+.box{
+    position:absolute;
+    width:800px;
+    height:600px;
+    top:24%;
+    left:40%;
+    border:1px solid black;
+    font-family: 'DM Serif Display', serif;
+    box-shadow:4px 9px 9px 12px rgba(0, 0, 0, 0.6);
+}
+
+.frame{
+    position:absolute;
+    top:45%;
+    left:39%;
+    transform:translate(-50%,-50%);
+}
+
+label{
+    font-weight:bold;
+    color:black;}
+
+input{
+    padding:20px;
+    margin:10px;
+    box-shadow:4px 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.btn{
+    padding:12px;
+    width:125px;
+}
+
+h3{
+    color:black;
+    font-weight:bold;
+    text-align:center;
+}

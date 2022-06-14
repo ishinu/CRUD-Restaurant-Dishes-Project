@@ -1,0 +1,46 @@
+@layout('./layouts.main');
+
+@section('title')
+Sign Up
+@endsection
+
+@section('extracss')
+{{ style('loginimage') }} 
+@endsection
+
+@section('content')
+
+
+<div class="box">
+        <div class="frame">
+            <h3>Log In Details</h3>
+
+            @if(flashMessage('loginError'))
+                <span>{{ flashMessage('loginError') }}</span>
+            @endif
+            <form action="{{ route('UserController.login') }}" method="POST">
+                {{ csrfField() }} 
+                <div class="form-group">
+                    <label for="email">E-mail :</label>
+                    <input type="email" name="email" value="{{ old('email','')}}"><br/>
+                    @if(hasErrorFor('email'))
+                        <span>
+                            {{ getErrorFor('email') }}
+                        </span>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input type="password" name="password" value="{{ old('password','')}}"><br/><br/>
+                    @if(hasErrorFor('password'))
+                        <span>
+                            {{ getErrorFor('password') }}
+                        </span>
+                    @endif
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+</div>
+
+@endsection

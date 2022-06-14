@@ -1,0 +1,43 @@
+header a{
+  text-decoration:none;
+  color:black;
+  opacity:0.4;
+}
+.exp{
+  transform:scale(1.4,1.4);
+}
+header a:hover{
+  opacity:1;
+  color:black;
+  text-decoration:none;}
+
+.box{
+position:relative;
+text-align:center;
+color:white;
+}
+
+.centered{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:black;
+}
+
+section input{
+opacity:0.6;
+padding:20px;
+width:600px;
+}
+
+section .display-4{
+  font-family: 'DM Serif Display', serif;
+  font-weight:700;
+  color:black;
+}
+
+.diffont{
+  font-family: 'DM Serif Display', serif;
+
+}

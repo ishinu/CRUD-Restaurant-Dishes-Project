@@ -1,0 +1,30 @@
+@layout('layouts.main');
+
+@section('title')
+Dishes
+@endsection
+
+@section('extracss')
+{{ style('dishimage') }} 
+@endsection
+
+@section('content')
+<div class="container dishes1">
+    <div class="card-deck text-center">
+      @each(food in foods)
+        <div class="card">
+          <img class="card-img-top" src="/banner3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ food.title }}</h5>
+            <p class="card-text">{{ food.description }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><a href="{{food.link}}" class="btn btn-secondary">Order Now</a></small><br><br>
+            <a href="{{ route('FoodController.edit', { id: food.id }) }}" class="btn btn-success">Edit</a>
+            <a href="{{ route('FoodController.delete', { id: food.id }) }}" class="btn btn-danger">Delete</a>
+          </div>          
+        </div>
+      @endeach
+    </div>
+</div>
+@endsection

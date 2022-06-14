@@ -1,0 +1,13 @@
+body{
+background:url("banner4.png");
+background-size:cover;
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+.dishes1{
+    position:absolute;
+    top:24%;
+    left:20%;
+}
